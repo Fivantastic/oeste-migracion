@@ -1,0 +1,54 @@
+2020-02-19T18:48:22+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 229376 bytes) en /hosting/www/oestevaquero.com/public/wp-content/plugins/wp-smushit/core/class-helper.php en la línea 45
+
+2020-02-19T18:48:54+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 65536 bytes) en /hosting/www/oestevaquero.com/public/wp-includes/class-wp-hook.php en la línea 288
+
+2020-02-19T18:49:23+00:00 CRITICAL Out of memory (allocated 6291456) (tried to allocate 40960 bytes) en /hosting/www/oestevaquero.com/public/wp-includes/pomo/mo.php en la línea 297
+
+2020-02-19T19:17:40+00:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 638976 bytes) en /hosting/www/oestevaquero.com/public/wp-content/plugins/wp-smushit/core/class-helper.php en la línea 45
+
+2020-02-19T19:48:25+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 360448 bytes) en /hosting/www/oestevaquero.com/public/wp-content/plugins/wp-smushit/core/class-helper.php en la línea 45
+
+2020-02-19T22:33:04+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 262144 bytes) en /hosting/www/oestevaquero.com/public/wp-content/plugins/wp-smushit/core/class-helper.php en la línea 45
+
+2020-02-19T22:38:55+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 569344 bytes) en /hosting/www/oestevaquero.com/public/wp-content/plugins/wp-smushit/core/class-helper.php en la línea 45
+
+2020-02-19T23:02:24+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /hosting/www/oestevaquero.com/public/wp-includes/pomo/mo.php en la línea 323
+
+2020-02-19T23:02:36+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 20480 bytes) en /hosting/www/oestevaquero.com/public/wp-includes/functions.php en la línea 578
+
+2020-02-19T23:18:31+00:00 CRITICAL Out of memory (allocated 4194304) (tried to allocate 962560 bytes) en /hosting/www/oestevaquero.com/public/wp-content/plugins/wp-smushit/core/class-helper.php en la línea 45
+
+2020-02-19T23:28:30+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:28:32+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:28:34+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:28:53+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:28:56+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:29:02+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:29:57+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:30:01+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:30:01+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:30:02+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:30:05+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:30:09+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:30:58+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:32:49+00:00 CRITICAL Cannot redeclare food_express_adjust_brightness() (previously declared in /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/functions.php:51) en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress/functions.php en la línea 51
+
+2020-02-19T23:38:03+00:00 CRITICAL Out of memory (allocated 2097152) (tried to allocate 77824 bytes) en /hosting/www/oestevaquero.com/public/wp-includes/pomo/streams.php en la línea 205
+
+2020-02-19T23:44:00+00:00 CRITICAL syntax error, unexpected '<', expecting end of file en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/header.php en la línea 12
+
+2020-02-19T23:47:54+00:00 CRITICAL syntax error, unexpected '<', expecting end of file en /hosting/www/oestevaquero.com/public/wp-content/themes/foodexpress-child/header.php en la línea 12
+

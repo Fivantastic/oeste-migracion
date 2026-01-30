@@ -1,0 +1,290 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+ * Colores Corporativos de Oeste Vaquero
+ * Basados en el logo oficial (logotop-1.png)
+ */
+:root {
+  /* Colores Principales del Logo */
+  --primary-orange: #f39548;
+  --primary-orange-dark: #e67e22;
+  --primary-orange-light: #f7c091;
+  
+  /* Colores Western/Cowboy */
+  --western-orange: #f39548;
+  --western-brown: #8b4513;
+  --western-brown-dark: #5a2e14;
+  --western-brown-light: #b45a1a;
+  --western-tan: #d2b48c;
+  --western-black: #1a1a1a;
+  --western-dark-brown: #2b1a0e;
+  
+  /* Colores de Texto */
+  --text-primary: #171717;
+  --text-secondary: #374151;
+  --text-tertiary: #6b7280;
+  
+  /* Colores de Fondo */
+  --background: #ffffff;
+  --foreground: #171717;
+  --bg-gray-50: #f9fafb;
+  --bg-gray-100: #f3f4f6;
+  
+  /* Bordes */
+  --border-light: #e5e7eb;
+  --border-orange: #f39548;
+  --border-brown: #b45a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: #ffffff;
+  color: #171717;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Western Typography */
+.western-title {
+  font-family: var(--font-alfa-slab), cursive;
+  color: var(--western-orange);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.western-text {
+  font-family: var(--font-trade-winds), cursive;
+  color: var(--western-orange);
+}
+
+/* Variant: western title in black */
+.western-title-black {
+  font-family: var(--font-alfa-slab), cursive;
+  color: #000;
+  text-shadow: none;
+}
+
+/* Header / Menu exact styles */
+.menufondo {
+  background-color: #f39548;
+  background-image: url('/uploads/uploads/2020/04/menufondo.png');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  border-top: 3px solid #b45a1a;
+  border-bottom: 3px solid #b45a1a;
+}
+
+.menufondo ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-link {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+  color: #2b1a0e;
+  padding: 8px 6px;
+}
+
+.menu-link:hover {
+  color: #5a2e14;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Dropdown submenu */
+.menu-item {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background: #f7c091; /* tono claro de la franja */
+  border: 2px solid #b45a1a;
+  border-top: none;
+  min-width: 220px;
+  z-index: 20;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 12px;
+  color: #2b1a0e;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background: rgba(180,90,26,0.12);
+  text-decoration: underline;
+}
+
+.menu-item:hover > .submenu {
+  display: block;
+}
+
+/* Custom Western Styles */
+.western-container {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f39548' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Western Button Styles */
+.western-button {
+  background: linear-gradient(45deg, var(--western-orange), #e67e22);
+  border: 2px solid var(--western-brown);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.western-button:hover {
+  background: linear-gradient(45deg, #e67e22, var(--western-orange));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Western Card Styles */
+.western-card {
+  background: rgba(139, 69, 19, 0.1);
+  border: 1px solid var(--western-orange);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 16px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Western Section Backgrounds */
+.western-section {
+  background: linear-gradient(135deg, rgba(243, 149, 72, 0.1), rgba(139, 69, 19, 0.1));
+  border-left: 4px solid var(--western-orange);
+  padding: 24px;
+  margin: 20px 0;
+}
+
+/* Western List Styles */
+.western-list li {
+  position: relative;
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.western-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: var(--western-orange);
+  font-weight: bold;
+}
+
+/* Corbetos specific styles */
+.corbetos-hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+}
+
+.corbetos-title {
+  font-family: serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.corbetos-subtitle {
+  font-family: serif;
+  font-style: italic;
+  letter-spacing: 0.3em;
+}
+
+.corbetos-button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 16px 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.corbetos-button:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Scrolling banner animation */
+@keyframes scroll-banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-banner {
+  animation: scroll-banner 30s linear infinite;
+}
+
+/* Testimonios cards */
+.testimonio-card {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.testimonio-card.active {
+  border-color: #991b1b;
+  background: #fef2f2;
+  transform: scale(1.02);
+}
+
+.testimonio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .western-container {
+    padding: 16px;
+  }
+  
+  .western-section {
+    padding: 16px;
+    margin: 12px 0;
+  }
+
+  .corbetos-title {
+    font-size: 2.5rem;
+  }
+
+  .corbetos-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}

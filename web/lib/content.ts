@@ -30,21 +30,29 @@ async function readMDXFile(filePath: string, slugParts: string[]): Promise<MDXDo
   return { slug: slugParts, meta: data as any, content, filePath };
 }
 
+const SLUG_SEGMENT = /^[a-z0-9-]+$/;
+const DATE_PREFIX = /^\d{4}-\d{2}-\d{2}-/;
+
+function isInsideDir(dir: string, filePath: string) {
+  return path.resolve(filePath).startsWith(path.resolve(dir) + path.sep);
+}
+
 export async function getPageBySlug(slug: string[]): Promise<MDXDoc | null> {
-  // Try pages first
-  const pageTry = path.join(PAGES_DIR, `${slug[slug.length - 1]}.mdx`);
-  if (await fileExists(pageTry)) {
+  if (!Array.isArray(slug) || slug.length !== 1 || !SLUG_SEGMENT.test(slug[0])) return null;
+  const base = slug[0];
+
+  const pageTry = path.join(PAGES_DIR, `${base}.mdx`);
+  if (isInsideDir(PAGES_DIR, pageTry) && (await fileExists(pageTry))) {
     return readMDXFile(pageTry, slug);
   }
-  // Try nested path under pages (dir/index.mdx style not used in conversion)
-  const pageTryIndex = path.join(PAGES_DIR, ...slug, "index.mdx");
-  if (await fileExists(pageTryIndex)) return readMDXFile(pageTryIndex, slug);
 
-  // Try posts by slug (without date prefix)
+  // Posts are stored as YYYY-MM-DD-<slug>.mdx (or <slug>.mdx)
   const files = await fs.readdir(POSTS_DIR).catch(() => [] as string[]);
-  const base = slug[slug.length - 1];
-  const postName = files.find((f) => f.endsWith(`${base}.mdx`));
-  if (postName) return readMDXFile(path.join(POSTS_DIR, postName), slug);
+  const postName = files.find((f) => f.replace(DATE_PREFIX, "") === `${base}.mdx`);
+  if (postName) {
+    const postPath = path.join(POSTS_DIR, postName);
+    if (isInsideDir(POSTS_DIR, postPath)) return readMDXFile(postPath, slug);
+  }
 
   return null;
 }
